@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+  color: #333; /* Change the text color to a shade of gray */
+  font-size: 24px; /* Change the font size to 24 pixels */
+  font-weight: bold; /* Make the text bold */
+  text-transform: uppercase; /* Convert the text to uppercase */
+  margin-top: 20px; /* Add some top margin for spacing */
+  text-decoration: underline; /* Add an underline to the text */
+}
