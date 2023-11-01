@@ -1,6 +1,82 @@
 #submitButton {
   margin-top: 20px;
 }
+
+.container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+#errorMessage {
+  font-size: 14px;
+}
+
+#submitButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submitButton:hover {
+  background-color: #0056b3;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table thead th {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.table tbody tr {
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* Style the table delete buttons */
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+  background-color: #a51b28;
+}
+
 #myCheckbox {
-  margin-left: 30px;
+  transform: scale(1.5);
+  margin: 0 auto;
 }
