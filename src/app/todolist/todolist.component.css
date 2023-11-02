@@ -80,3 +80,16 @@ form {
   transform: scale(1.5);
   margin: 0 auto;
 }
+
+.high-priority {
+  font-weight: bold;
+  color: red;
+}
+
+.medium-priority {
+  color: orange;
+}
+
+.low-priority {
+  color: green;
+}
