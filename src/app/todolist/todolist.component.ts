@@ -12,18 +12,23 @@ interface Task {
   styleUrls: ['./todolist.component.css'],
 })
 export class TodolistComponent {
+  SearchText: string = '';
   taskArray = [
     { taskname: 'Brush teeth', isCompleted: false, priority: 'low' },
   ];
   onSubmit(form: NgForm) {
-    console.log(this.taskArray);
     this.taskArray.push({
       taskname: form.controls['task'].value,
       isCompleted: false,
       priority: form.controls['priority'].value,
     });
+
     form.reset();
   }
+  setSearchText(value: string) {
+    this.SearchText = value;
+  }
+
   deleteTask(index: number) {
     this.taskArray.splice(index, 1);
   }

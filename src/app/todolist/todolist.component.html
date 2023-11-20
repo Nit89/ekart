@@ -43,9 +43,19 @@
     </button>
   </form>
 
-  <button class="btn btn-success" (click)="markAllAsCompleted()">
-    Mark All Completed
-  </button>
+  <div class="row">
+    <div class="col-md-6">
+      <app-search (searchTextchnaged)="setSearchText($event)"></app-search>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Your "Mark All Completed" button here -->
+      <button class="btn btn-success" (click)="markAllAsCompleted()">
+        Mark All Completed
+      </button>
+    </div>
+  </div>
   <hr />
 
   <table class="table">
@@ -58,38 +68,40 @@
       </tr>
     </thead>
     <tbody>
-      <tr
-        *ngFor="let t of taskArray; index as i"
-        [ngClass]="{ 'completed-task': t.isCompleted }"
-      >
-        <td>
-          <span
-            [ngClass]="{
-              'high-priority': t.priority === 'High',
-              'medium-priority': t.priority === 'Medium',
-              'low-priority': t.priority === 'Low'
-            }"
-          >
-            {{ t.taskname }}
-          </span>
-        </td>
-        <td>{{ t.priority }}</td>
-        <td>
-          <input
-            (change)="onCheck(i)"
-            id="myCheckbox"
-            type="checkbox"
-            [checked]="t.isCompleted"
-            aria-label="Checkbox for following text input"
-          />
-        </td>
+      <ng-container *ngFor="let t of taskArray; index as i">
+        <tr
+          *ngIf="t.taskname.toLowerCase().includes(SearchText)"
+          [ngClass]="{ 'completed-task': t.isCompleted }"
+        >
+          <td>
+            <span
+              [ngClass]="{
+                'high-priority': t.priority === 'High',
+                'medium-priority': t.priority === 'Medium',
+                'low-priority': t.priority === 'Low'
+              }"
+            >
+              {{ t.taskname }}
+            </span>
+          </td>
+          <td>{{ t.priority }}</td>
+          <td>
+            <input
+              (change)="onCheck(i)"
+              id="myCheckbox"
+              type="checkbox"
+              [checked]="t.isCompleted"
+              aria-label="Checkbox for following text input"
+            />
+          </td>
 
-        <td>
-          <button class="btn btn-danger btn-sm" (click)="deleteTask(i)">
-            Delete
-          </button>
-        </td>
-      </tr>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="deleteTask(i)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </ng-container>
     </tbody>
   </table>
 </div>
