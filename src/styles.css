@@ -7,5 +7,21 @@
 } */
 
 .container {
-  background-color: #aefafd; /* Change to the color you want for the header */
+  /* background-color: rgb(
+    108,
+    148,
+    227
+  );  */
+  /* background: linear-gradient(to bottom, #34db77, #ffffff);
+   */
+  background: linear-gradient(to bottom, #3498db, #ffffff);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

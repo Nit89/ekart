@@ -1,21 +1,23 @@
-#submitButton {
-  margin-top: 20px;
-}
+/* styles.css */
 
 .container {
   margin-top: 20px;
   padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form {
   margin-bottom: 20px;
 }
 
+.form-group {
+  margin-bottom: 15px;
+}
+
 .form-control {
-  border: 1px solid #ccc;
+  border: 1px solid #ced4da; /* Light gray border */
   border-radius: 5px;
   padding: 10px;
   width: 100%;
@@ -39,6 +41,10 @@ form {
   background-color: #0056b3;
 }
 
+.row {
+  margin-bottom: 20px; /* Add space between rows */
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -49,7 +55,7 @@ form {
   background-color: #007bff;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 15px; /* Increased padding for header */
 }
 
 .table tbody tr {
@@ -61,19 +67,13 @@ form {
   background-color: #f2f2f2;
 }
 
-/* Style the table delete buttons */
-.btn-danger {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.completed-task {
+  background-color: #d4edda !important; /* Light green background for completed tasks */
 }
 
-.btn-danger:hover {
-  background-color: #a51b28;
+.btn-danger,
+.btn-success {
+  margin-right: 5px; /* Add space between Delete and Mark All Completed buttons */
 }
 
 #myCheckbox {
@@ -92,4 +92,9 @@ form {
 
 .low-priority {
   color: green;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: #6c757d;
 }
